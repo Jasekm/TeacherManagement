@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nauczyciele_okienkowo.TeacherGroupController" spacing="15">
+    <TableView fx:id="tableView" onMouseClicked="#onChangeScene" style="-fx-background-color: #f5f5f5; -fx-border-color: #ddd;">
+        <columns>
+            <TableColumn fx:id="nazwaGrupyColumn" text="Nazwa Grupy" prefWidth="180.0" />
+            <TableColumn fx:id="liczbaNauczycieliColumn" text="Liczba Nauczycieli" prefWidth="150.0" />
+            <TableColumn fx:id="maxNauczycieliColumn" text="Maksymalna Liczba Nauczycieli" prefWidth="180.0" />
+            <TableColumn fx:id="procentoweZapelnienieColumn" text="Procentowe Zapełnienie" prefWidth="220.0" />
+            <TableColumn fx:id="liczbaOcenPowyzejSredniejColumn" text="Liczba Ocen Powyżej Średniej" prefWidth="250.0" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="15" alignment="CENTER" style="-fx-background-color: #f9f9f9; -fx-border-radius: 5; -fx-border-width: 1; -fx-border-color: #ccc;">
+        <TextField fx:id="nazwaGrupyField" promptText="Nazwa grupy" HBox.hgrow="ALWAYS" style="-fx-font-size: 14px; -fx-padding: 5;" />
+        <TextField fx:id="maxNauczycieliField" promptText="Maksymalna liczba nauczycieli" HBox.hgrow="ALWAYS" style="-fx-font-size: 14px; -fx-padding: 5;" />
+        <Button fx:id="addGroupButton" onAction="#onAddGroupClicked" text="Dodaj Grupę" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-size: 14px; -fx-border-radius: 5;" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="removeGroupButton" onAction="#onRemoveGroupClicked" text="Usuń Grupę" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-size: 14px; -fx-border-radius: 5;" />
+        <Button fx:id="modifyButton" onAction="#onModifyButtonClicked" text="Modyfikuj" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-size: 14px; -fx-border-radius: 5;" />
+        <Button fx:id="exportCsvButton" onAction="#onExportCsvClicked" text="Utwórz CSV" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-size: 14px; -fx-border-radius: 5;" />
+        <Button fx:id="addRateButton" onAction="#onAddRateClicked" text="Dodaj Ocene" style="-fx-background-color: #8E24AA; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-size: 14px; -fx-border-radius: 5;" />
+    </HBox>
+
+    <TextField fx:id="searchField" promptText="Wyszukaj..." onKeyReleased="#onSearchFieldChanged"
+                style="-fx-font-size: 16px; -fx-background-color: #e0f7fa; -fx-border-radius: 5; -fx-border-color: #00796b; -fx-padding: 10px; -fx-min-width: 300px;" />
+</VBox>

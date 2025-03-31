@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nauczyciele_okienkowo.RateDialogController" spacing="15" style="-fx-padding: 20;">
+
+    <TextField fx:id="rateValueField" promptText="Wartość oceny (0-6)" style="-fx-font-size: 14px; -fx-padding: 5;" />
+    <TextArea fx:id="commentField" promptText="Komentarz" wrapText="true" style="-fx-font-size: 14px; -fx-padding: 5;" />
+    <DatePicker fx:id="datePicker" promptText="Data wystawienia" style="-fx-font-size: 14px; -fx-padding: 5;" />
+    <Button fx:id="saveButton" text="Zapisz Ocene" onAction="#onSaveButtonClicked" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-size: 14px; -fx-border-radius: 5;" />
+    <Button fx:id="cancelButton" text="Anuluj" onAction="#onCancelButtonClicked" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-size: 14px; -fx-border-radius: 5;" />
+</VBox>
